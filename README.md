@@ -5,5 +5,8 @@ This is a Community work by a team of developers in the field of medical informa
 
 The goal is to develop the technical skills of the participants developers in various scientific and programming fields
 
+# Participants
+collecting...
+
 # Roadmap
 in progress..

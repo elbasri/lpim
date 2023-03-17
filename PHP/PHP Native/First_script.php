@@ -11,4 +11,9 @@ else
     echo "New Edit";
 //17-03-2023 test 
 
+if($name ==  "raja")
+    echo "First Edit";
+else
+    echo "New Edit";
+//17-03-2023 test 
 ?>

@@ -1,5 +1,5 @@
 <?php
-echo "HELLO LIPM !";
+echo "HELLO lpim !";
 // comment -- test
 $name="hajar";
 echo $name;

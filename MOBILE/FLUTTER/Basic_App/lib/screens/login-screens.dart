@@ -1,6 +1,8 @@
 import 'dart:developer';
 
+import 'package:fh2_mobile/providers/auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -14,8 +16,13 @@ late String _email;
 late String _password;
 
 void submit(){
-  log(_email);
-  log(_password);
+  Provider.of<Auth>(context, listen: false).login(
+    credentials: {
+      'email': _email,
+      'password': _password,
+
+    }
+  );
 }
   @override
   Widget build(BuildContext context) {
@@ -30,6 +37,7 @@ void submit(){
             child: Column(
               children: [
                 TextFormField(
+                  initialValue: 'hello@nacer.ma',
                   decoration: InputDecoration(
                     labelText: 'Email',
                     hintText: 'hello@nacer.ma'
@@ -39,6 +47,7 @@ void submit(){
                   },
                 ),
                 TextFormField(
+                  initialValue: '1234567',
                   decoration: InputDecoration(
                     labelText: 'Password',
                     hintText: '123456'

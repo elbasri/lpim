@@ -1,8 +1,15 @@
+import 'package:fh2_mobile/providers/auth.dart';
 import 'package:fh2_mobile/widgets/nav-drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => Auth(),
+      child: MyApp(),
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
